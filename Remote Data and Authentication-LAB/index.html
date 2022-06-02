@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>    
+      
+    </button>
+    <script>
+       async function postData(){
+           const url = `http://localhost:3030/jsonstore/phonebook`;
+           
+           const data = {
+               "person": "George",
+               "phone": "+1-555-2698",
+           }
+
+           const options = {
+              method: 'post',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+           };
+
+
+           fetch(url,options);
+       }
+    </script>
+</body>
+</html>
